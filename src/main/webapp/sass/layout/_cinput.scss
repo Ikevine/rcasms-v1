@@ -1,0 +1,26 @@
+.cinput{
+  width: 80%;
+  background-color: $secondary;
+  padding: 1.5rem 5rem;
+  border-radius: 5px;
+  position: relative;
+  .desf{
+    width: 100%;
+    padding:0rem 0.2rem;
+    margin-bottom: 1.5rem;
+    h1{
+      text-align: left;
+      padding-left:0.2rem ;
+    }
+  }
+  .indesc{
+    @include flex-row;
+    gap: 3rem;
+    padding: 0.5rem;
+  }
+  .dcenter{
+    width: 100%;
+    @include flex;
+    margin-top: 1.5rem;
+  }
+}

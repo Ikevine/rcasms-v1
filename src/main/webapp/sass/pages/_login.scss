@@ -1,0 +1,63 @@
+.container{
+  height: 100vh;
+  .Lleft{
+    width: 50%;
+    @include flex;
+    .Lmain{
+      @include flex;
+      width: 60%;
+      margin: auto 0px;
+      gap: 0.8rem;
+      .lform{
+        width: 90%;
+        text-align: center;
+        .allr{
+          margin-top: 0.5rem;
+          color: grey;
+          a{
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 0.4rem;
+            color: $ascent;
+          }
+        }
+      }
+    }
+  }
+
+  //right side
+  .Lright{
+    width: 60%;
+    background:url('../../images/new.jpg');
+    position: relative;
+    .overlay{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: rgb(0,0,0,60%);
+      color: $secondary;
+      @include flex;
+      .ovhead{
+        width: 60%;
+        margin: 1.5rem;
+        @include flex;
+        gap: 0.4rem;
+        h2{
+          font-size: 30px;
+          text-align: center;
+        }
+      }
+      .ovdown{
+        width: 80%;
+        text-align: center;
+        p{
+          text-align: center;
+          color: $bg;
+          width: 90%;
+        }
+      }
+    }
+  }
+}

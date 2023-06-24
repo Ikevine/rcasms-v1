@@ -1,0 +1,109 @@
+.input{
+  border: none;
+  border-bottom: 4px solid $ascent;
+  padding: 0.8rem 0rem;
+  width: 100%;
+  font-size: 16px;
+  &::placeholder{
+    color: $grey;
+    font-size: 16px;
+  }
+  &:focus{
+    outline: none;
+    background-color: aliceblue;
+    padding: 0.5rem 0.6rem;
+  }
+}
+
+.select-container{
+  position: relative;
+  width: 100%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .select-box{
+    border: none;
+    appearance: none;
+    padding: 0.8rem 0rem;
+    width: 100%;
+    border-bottom: 4px solid $ascent;
+    font-size: 16px;
+    color: $grey;
+    &:focus{
+      outline: none;
+    }
+    option{
+      padding: 2rem;
+    }
+  }
+
+  .icon1{
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 2rem;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    i{
+      color: $ascent;
+      width: 1.2rem;
+      height: 1.3rem;
+    }
+  }
+
+}
+
+// field
+fieldset{
+  width: 50%;
+  border-radius: 5px;
+  padding: 0.2rem;
+  @include flex;
+  legend{
+    padding: 0.6rem;
+    font-weight: 500;
+    color: $grey;
+  }
+  .check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+
+    label{
+      color: $grey;
+    }
+    input[type = "checkbox"]{
+      appearance: none;
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: $bg;
+      padding: 0.6rem;
+      border: 2px solid grey;
+      border-radius: 0.2rem;
+      cursor: pointer;
+      outline: none;
+      @include flex;
+      &::after{
+        font-family: "Font Awesome 6 Free";
+        font-weight: 400;
+        content: "\f560";
+        color: $secondary;
+        display: none;
+        font-size: 10px;
+      }
+      &:checked{
+        background-color: $ascent;
+        border: none;
+        &::after{
+          display: block;
+        }
+      }
+    }
+  }
+
+}

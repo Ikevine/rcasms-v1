@@ -1,0 +1,39 @@
+.sub-nav{
+  display: none;
+}
+.nmiddle{
+  ul{
+    li{
+      &:hover{
+        .sub-nav{
+          display: block;
+          position: absolute;
+          margin-top: 2px;
+          margin-left: -15px;
+          background-color: $secondary;
+          border-radius: 8px;
+          color: white;
+          height: auto;
+          ul{
+            //to set the li to vertical normal display vertical
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            li{
+              text-align: start;
+              background-color: transparent;
+              a{
+                color: $black;
+                &:hover{
+                  background-color: transparent;
+                  color: $ascent;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

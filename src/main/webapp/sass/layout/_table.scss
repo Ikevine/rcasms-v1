@@ -1,0 +1,53 @@
+.tbody{
+  width: auto;
+  background-color: $secondary;
+  padding: 0.5rem;
+  border-radius: 5px;
+  position: relative;
+  #sidebtn{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  table{
+    margin-top: 2.5rem;
+    width: 100%;
+    @include flex;
+  }
+  table, th , td{
+    border-collapse: collapse;
+  }
+
+  th{
+    text-align: left;
+    font-weight: 600;
+
+  }
+  th, td{
+
+    padding: 0.4rem 1.6rem;
+    font-size: 14px;
+    color: $black;
+  }
+  .haction{
+    text-align: left;
+  }
+  table{
+    tr{
+      .action{
+        display: flex;
+        gap: 0.5rem;
+        .view{
+          @include btnview(green);
+        }
+        .delete{
+          @include btnview(red)
+        }
+        .update{
+          @include btnview($ascent);
+        }
+
+      }
+    }
+  }
+}

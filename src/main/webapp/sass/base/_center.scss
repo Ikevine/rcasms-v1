@@ -1,0 +1,111 @@
+.container{
+  display: flex;
+  width: 100vw;
+}
+.container2{
+  @extend .container;
+  .dleft{
+    width: 18%;
+    height:100vh;
+  }
+  .dright{
+    width: 82%;
+    @include flex;
+    .upper_desc{
+      margin-bottom: 4rem;
+      @include flex;
+      gap: 0.2rem;
+      p{
+        font-size: 15px;
+        color: $grey;
+      }
+    }
+  }
+  background-color: $body;
+}
+.log{
+  width: 5rem;
+  height: 5rem;
+  background-color: $bg;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img{
+    width: 70%;
+    height: 70%;
+  }
+}
+
+.container3{
+  @include flex-row;
+  width:auto;
+  padding: 0.5rem;
+  background-color: transparent;
+  border-radius: 5px;
+  gap: 3rem;
+  .ldetail{
+    background-color: white;
+    width: auto;
+    border-radius: 5px;
+    padding: 1.4rem;
+    .dh1{
+      width: 100%;
+      text-align: center;
+      padding-bottom:0.5rem;
+      color: $ascent;
+    }
+    .dbody{
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      padding-left: 4rem;
+      .detail{
+        display: flex;
+        flex-direction: column;
+        h3{
+          font-size: 16px;
+          color: $ascent;
+        }
+        p{
+          color: $grey;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  .rdetail{
+    width: auto;
+    padding: 1.4rem;
+    background-color: $secondary;
+    border-radius: 5px;
+    padding: 0.3rem;
+    .dlink{
+      display: flex;
+      // flex-wrap: wrap;
+      gap: 0.2rem;
+      a{
+        padding:0.5rem 0.8rem;
+        background-color: white;
+        margin-bottom: 0.5rem;
+        color: $black;
+        font-weight: 600;
+        border-radius: 5px;
+        &:hover{
+          background-color: $ascent;
+          color: $secondary;
+        }
+      }
+    }
+  }
+}
+
+.enrol{
+  width: 100%;
+  h1{
+    text-align: center;
+    color: $black;
+    font-size: 15px;
+  }
+}
